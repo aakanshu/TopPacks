@@ -1,0 +1,15 @@
+<div> Top 10 imported packages are</div>
+ <table class="table table-stripped table-border">
+      <thead><tr><th class="col-md-9">Name</th><th class="col-md-3">Count</th></tr></thead>
+      <tbody>
+      <% @packages.each do |package| %>
+        <tr>
+          <td> <div> <%= package.name %></div>
+          </td>
+          <td>
+            <div> <%= package.number %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div> Packages imported for <b><%= @repository.name %> are</b></div>
+
+<div class="row">
+  <div class="col-md-8">
+  <% if @packages.count > 0%>
+    <table class="table table-stripped table-border">
+      <thead><tr><th class="col-md-9">Name</th></tr></thead>
+      <tbody>
+      <% @packages.each do |package| %>
+        <tr>
+          <td> <div> <%= package["name"] %></div>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <div> No Packages Found </div>
+  <% end %>
+  </div>
+</div>
